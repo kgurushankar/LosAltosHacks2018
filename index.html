@@ -7,11 +7,23 @@
   </head>
   <body>
     <h1 id="header">Tournament Creator</h1>
-    <div class="row">
-      <div class="col-md-3 col-sm-3 col-xs-6">
-        <a href="#" class="btn btn-sm animated-button thar-one">Manager</a>
-        <a href="#" class="btn btn-sm animated-button thar-one">Player</a>
+
+    <form class="" action="index.html" method="post">
+      <div class="search row">
+        <input type="text" name="" value="">
+        <div class="col-md-3 col-sm-3 col-xs-6 buttons">
+          <a href="#" class="btn btn-sm animated-button thar-one">Search</a>
+        </div>
       </div>
-    </div>
+    </form>
+
+    <script type="text/javascript">
+      var submit = document.querySelector('a')
+      var search = document.querySelector('input')
+
+      submit.onclick = function() {
+        console.log(search.innerText)
+      }
+    </script>
   </body>
 </html>
