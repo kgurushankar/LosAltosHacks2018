@@ -26,8 +26,14 @@ const adminRoot = root + '/admin';
 
 app.get('/', require('./index.js'));
 
-app.post('/search', function (req, res) {
-    console.log(req.cookies);
-    console.log(req.body);
-    res.json('success');
+app.all('/search', function (req, res) {
+    var tournaments = Object.keys(require('./data/config'));
+    var out = [];
+    for (var i = 0; i < tournaments.length; i++) {
+        if (tournaments[i].includes(req.body.query)) {
+            out.push(tournaments[i]);
+        }
+    }
+    console.log(out);
+    res.json(out);
 });

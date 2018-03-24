@@ -12,7 +12,7 @@
 
   <form class="" action="index.html" method="post">
     <div class="search row">
-      <input type="text" name="" value="">
+      <input type="text" name="">
       <div class="col-md-3 col-sm-3 col-xs-6 buttons">
         <a href="#" class="btn btn-sm animated-button thar-one">Search</a>
       </div>
@@ -27,7 +27,7 @@
       $.ajax({
         url: '/search',
         dataType: "json",
-        type: "GET",
+        type: "POST",
         cache: false,
         data: { query: text },
         success: function (data, textStatus, jqXHR) {
@@ -35,8 +35,8 @@
           //this is what you will do with the info 
         },
         error: function (jqXHR, textStatus, err) {
-          //Prints out the error alert
-          ('text status ' + textStatus + ', err ' + err);
+          //Prints out the error
+          alert('text status ' + textStatus + ', err ' + err);
         }
       });
       console.log(search.innerText)
