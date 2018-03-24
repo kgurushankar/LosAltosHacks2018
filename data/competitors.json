@@ -1,5 +1,5 @@
 {
-    "tournament_name": {
+    "tournament name": {
         "fm_mi_ln": {
             "fn": "first Name",
             "Middle Initial": "",
@@ -8,5 +8,8 @@
             "email": "",
             "parent_email": ""
         }
-    }
+    },
+    "Santa Clara Fencing Tournament": {},
+    "Sunnyvale Tennis Competition": {},
+    "Mountain View Tennis Tournament": {}
 }

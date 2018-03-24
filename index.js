@@ -5,7 +5,6 @@ module.exports = function (req, res) {
         if (err) {
             throw err;
         }
-        res.cookie("hello", "sup").send(data.toString());
-        // console.log(data);
+        res.send(data.toString());
     });
 }

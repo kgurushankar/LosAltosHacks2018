@@ -14,10 +14,6 @@ var cookieParser = require('cookie-parser');
 app.use(cookieParser());
 app.listen(8080);
 
-// For auth
-var jwt = require('jsonwebtoken');
-//const Secret = cfg.Secret;
-
 // links
 const root = '';
 const adminRoot = root + '/admin';
@@ -37,9 +33,21 @@ app.post('/search', function (req, res) {
     console.log(out);
     res.json(out);
 });
+
 app.post('./register', function (req, res) {
     var data = req.body;
-    
+    var t = req.cookies.tournament;
+    if (t == null) {
+        res.json('no tournament specified');
+    }
+    var file = require('./data/competitors.json');
+    file[t][data.firstName + "_" + data.lastName] = data;
+
+    require('fs').writeFile('./data/competitors.json', JSON.stringify(file), function (err) {
+        if (err) return console.log(err);
+    });
+    res.json({ 'message': 'success' });
+
 })
 
 app.post('/login', require('./login.js'));
