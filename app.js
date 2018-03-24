@@ -1,5 +1,4 @@
-//var cfg = require("./data/config.1.js");
-
+var cfg = require('./data/config.json');
 
 // #Express Stuff
 var express = require('express');
@@ -28,6 +27,7 @@ const adminRoot = root + '/admin';
 app.get('/', require('./index.js'));
 
 app.post('/search', function (req, res) {
+    console.log(req.cookies);
     console.log(req.body);
     res.json('success');
 });
