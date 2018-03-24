@@ -1,0 +1,15 @@
+body {
+  background-image: url("https://i.pinimg.com/originals/81/4e/12/814e12ed3781f3b7c8dac676d3fddb33.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#header {
+  color: white;
+  font-family: fantasy;
+  text-align: center;
+}
+
+button {
+  text-align: center;
+}
