@@ -1,46 +1,29 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/master.css">
+    <title>Tournament Creator</title>
+  </head>
+  <body>
+    <h1 id="header">Tournament Creator</h1>
 
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="/master.css">
-  <title>Tournament Creator</title>
-</head>
+    <form class="" action="index.html" method="post">
+      <div class="search row">
+        <input type="text" name="" value="">
+        <div class="col-md-3 col-sm-3 col-xs-6 buttons">
+          <a href="#" class="btn btn-sm animated-button thar-one">Search</a>
+        </div>
+      </div>
+    </form>
 
-<body>
-  <h1 id="header">Tournament Creator</h1>
+    <script type="text/javascript">
+      var submit = document.querySelector('a')
+      var search = document.querySelector('input')
 
-  <div class="search row">
-    <input type="text" name="" value="">
-    <div class="col-md-3 col-sm-3 col-xs-6 buttons">
-      <a href="#" class="btn btn-sm animated-button thar-one">Search</a>
-    </div>
-  </div>
-  <script src="/jquery.js"></script>
-  <script type="text/javascript">
-    var submit = document.querySelector('a')
-    var search = document.querySelector('input')
-
-    submit.onclick = function () {
-      var text = search.value;
-      $.ajax({
-        url: '/search',
-        dataType: "json",
-        type: "POST",
-        cache: false,
-        data: { query: text },
-        success: function (data, textStatus, jqXHR) {
-          //data is what I will send you
-          //this is what you will do with the info
-        },
-        error: function (jqXHR, textStatus, err) {
-          //Prints out the error
-          alert('text status ' + textStatus + ', err ' + err);
-        }
-      });
-      console.log(search.innerText)
-    }
-  </script>
-</body>
-
+      submit.onclick = function() {
+        console.log(search.innerText)
+      }
+    </script>
+  </body>
 </html>
