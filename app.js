@@ -34,7 +34,9 @@ app.post('/search', function (req, res) {
     res.json(out);
 });
 
-app.post('./register', function (req, res) {
+app.post('/register', function (req, res) {
+    console.log(req.body);
+    console.log(req.cookies);
     var data = req.body;
     var t = req.cookies.tournament;
     if (t == null) {

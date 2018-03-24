@@ -1,15 +1,1 @@
-{
-    "tournament name": {
-        "fm_mi_ln": {
-            "fn": "first Name",
-            "Middle Initial": "",
-            "ln": "Last name",
-            "DoB": "dob",
-            "email": "",
-            "parent_email": ""
-        }
-    },
-    "Santa Clara Fencing Tournament": {},
-    "Sunnyvale Tennis Competition": {},
-    "Mountain View Tennis Tournament": {}
-}
+{"tournament name":{"fm_mi_ln":{"fn":"first Name","Middle Initial":"","ln":"Last name","DoB":"dob","email":"","parent_email":""}},"Santa Clara Fencing Tournament":{"alfksj_salkfj":{"firstName":"alfksj","lastName":"salkfj","date":"05/14/2002","personalEmail":"laskfj","parentEmail":"salkfdj"},"Tan_So":{"firstName":"Tan","lastName":"So","date":"05/14/2002","personalEmail":"aslfkdj","parentEmail":"afsdj"}},"Sunnyvale Tennis Competition":{},"Mountain View Tennis Tournament":{}}
