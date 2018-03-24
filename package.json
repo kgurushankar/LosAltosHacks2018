@@ -1,0 +1,28 @@
+{
+  "name": "losaltoshacks2018",
+  "version": "0.1.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kgurushankar/LosAltosHacks2018.git"
+  },
+  "keywords": [
+    "management"
+  ],
+  "author": "kgurushankar, tsonthalia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kgurushankar/LosAltosHacks2018/issues"
+  },
+  "homepage": "https://github.com/kgurushankar/LosAltosHacks2018#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.0"
+  }
+}
