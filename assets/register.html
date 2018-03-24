@@ -8,14 +8,42 @@
   <body>
     <h1 id="header">Register</h1>
     <div class="inputs">
-      <input type="text" name="" value="First Name" placeholder="First Name">
-      <input type="text" name="" value="Last Name" placeholder="Last Name">
-      <input type="date" name="" value="" placeholder="Date Of Birth">
-      <input type="email" name="" value="Personal Email" placeholder="Personal Email">
-      <input type="text" name="" value="Parent Email" placeholder="Parent Email">
+      <input id="firstName" type="text" name="" value="First Name" placeholder="First Name">
+      <input id="lastName" type="text" name="" value="Last Name" placeholder="Last Name">
+      <input id="date" type="date" name="" value="" placeholder="Date Of Birth">
+      <input id="personalEmail" type="email" name="" value="Personal Email" placeholder="Personal Email">
+      <input id="parentEmail" type="text" name="" value="Parent Email" placeholder="Parent Email">
       <div class="col-md-3 col-sm-3 col-xs-6 buttons">
         <a id="submit" href="#" class="btn btn-sm animated-button thar-one">Submit</a>
       </div>
     </div>
+
+    <script src="/jquery.js"></script>
+    <script type="text/javascript">
+      var submit = document.getElementById('submit');
+      var fNameButton = document.getElementById('firstName');
+      var lNameButton = document.getElementById('lastName');
+      var dateButton = document.getElementById('date');
+      var personalEmailButton = document.getElementById('personalEmail');
+      var parentEmailButton = document.getElementById('parentEmail');
+
+      submit.onclick = function () {
+        $.ajax({
+          url: '/register',
+          dataType: "json",
+          type: "POST",
+          cache: false,
+          data: { firstName: fNameButton.value , lastName: lastNameButton.value , date: dateButton.value , personalEmail: personalEmailButton.value, parentEmail: parentEmailButton.value},
+          success: function (data, textStatus, jqXHR) {
+            //data is what I will send you
+            //this is what you will do with the info
+          },
+          error: function (jqXHR, textStatus, err) {
+            //Prints out the error
+            alert('text status ' + textStatus + ', err ' + err);
+          }
+        });
+      }
+    </script>
   </body>
 </html>
