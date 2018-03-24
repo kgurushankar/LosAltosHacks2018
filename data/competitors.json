@@ -1,0 +1,12 @@
+{
+    "tournament_name": {
+        "fm_mi_ln": {
+            "fn": "first Name",
+            "Middle Initial": "",
+            "ln": "Last name",
+            "DoB": "dob",
+            "email": "",
+            "parent_email": ""
+        }
+    }
+}

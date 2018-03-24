@@ -26,3 +26,8 @@ const adminRoot = root + '/admin';
 
 
 app.get('/', require('./index.js'));
+
+app.post('/search', function (req, res) {
+    console.log(req.body);
+    res.json('success');
+});
