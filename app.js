@@ -26,7 +26,7 @@ const adminRoot = root + '/admin';
 
 app.get('/', require('./index.js'));
 
-app.all('/search', function (req, res) {
+app.post('/search', function (req, res) {
     var tournaments = Object.keys(require('./data/config'));
     var out = [];
     for (var i = 0; i < tournaments.length; i++) {
@@ -37,3 +37,9 @@ app.all('/search', function (req, res) {
     console.log(out);
     res.json(out);
 });
+app.post('./register', function (req, res) {
+    var data = req.body;
+    
+})
+
+app.post('/login', require('./login.js'));
