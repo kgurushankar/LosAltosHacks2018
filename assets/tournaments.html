@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Tournament Creator</title>
-    <link rel="stylesheet" href="assets/tournaments.css">
+    <link rel="stylesheet" href="/tournaments.css">
   </head>
   <body>
     <h1 id="header">Tournaments</h1>
@@ -12,7 +12,8 @@
 
   <script type="text/javascript">
     var array = document.getElementById('array')
-    var tourneys = localStorage.myArray
+    console.log(localStorage.myArray)
+    var tourneys = JSON.parse(localStorage.myArray)
     var text = ""
     for (var i = 0; i<tourneys.length; i++) {
       text += "<button id='tournament'>" + tourneys[i] + "</button>" + "<button id='select'>Select</button> <br>";

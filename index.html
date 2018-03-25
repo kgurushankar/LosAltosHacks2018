@@ -14,7 +14,7 @@
     <div class="search row">
       <input type="text" name="">
       <div class="col-md-3 col-sm-3 col-xs-6 buttons">
-        <a href="#" class="btn btn-sm animated-button thar-one">Search</a>
+        <a href="/tournaments.html" class="btn btn-sm animated-button thar-one">Search</a>
       </div>
     </div>
   </form>
@@ -33,8 +33,7 @@
         success: function (data, textStatus, jqXHR) {
           console.log(data)
           var randomData = ["banana", "grapefruit"]
-          localStorage.myArray = data;
-          window.location.replace(register.html)
+          localStorage.myArray = JSON.stringify(data);
           //data is what I will send you
           //this is what you will do with the info
         },
