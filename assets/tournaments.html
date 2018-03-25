@@ -20,7 +20,7 @@
   var text = ""
   if (tourneys.length!=0) {
     for (var i = 0; i < tourneys.length; i++) {
-      text += "<button onclick='go(\"" + tourneys[i] + "\")' id='tournament'>" + tourneys[i] + "</button>" + "<button onclick='go(\"" + tourneys[i] + "\")' id='select'>Register</button> <br>";
+      text += "<p id='tournament'>" + tourneys[i] + "</p>" + "<button onclick='info(\"" + tourneys[i] + "\")' id='select' >Get Info</button><button onclick='go(\"" + tourneys[i] + "\")' id='select'>Register</button> <br>";
     }
   }
   else {
@@ -33,7 +33,7 @@
   }
   function info(name) {
     document.cookie = "tournament = " + name;
-    window.location.replace('/register.html')
+    window.location.replace('/info')
   }
 </script>
 

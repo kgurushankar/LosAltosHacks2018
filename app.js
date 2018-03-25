@@ -51,3 +51,38 @@ app.post('/register', function (req, res) {
 })
 
 app.post('/login', require('./login.js'));
+
+
+app.get('/info', function (req, res) {
+    var t = req.cookies.tournament;
+    var t2 = require('./data.json')[t].config;
+    var out = `<!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title>BrackIT</title>
+        <link rel="stylesheet" href="info.css">
+        <link rel="icon" href="/bracket.jpg">
+      </head>
+      <body>
+        <h1 id="header">${t}</h1>
+        <div class="bracket">
+          <p>[Put Bracket Here]</p>
+        </div>
+        <div class="basicInfo">
+          <p>Location: ${t2.location}</p>
+          <p>Date: ${t2.date}</p>
+        </div>
+        <div class="matchups">
+          <p class="matchupHeader">Matchups:</p>
+        </div>
+      </body>
+    
+      <script type="text/javascript">
+        var header = document.getElementById("header");
+        //header.innerHTML =
+      </script>
+    </html>
+    `;
+    res.send(out);
+});
