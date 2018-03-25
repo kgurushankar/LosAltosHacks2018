@@ -9,122 +9,139 @@ module.exports = function (t, data) {
 
     return `<html>
 	<head>
-		<title>${data.name}</title>
+		<title>BrackIT</title>
 		<style>
-body {
-	font-family: helvetica, sans-serif;
-}
+      body {
+      	font-family: 'Copperplate';
+        background-image: url("/background.jpg");
+      }
 
-#description {
-	position: absolute;
-	width: 720px;
-	border-bottom: 2px solid #333;
-	border-radius: 4px;
-	padding: 8px;
-	font-size: 24pt;
-}
+      #bracket {
+        text-align: center;
+      }
 
-#head-contact {
-	position: absolute;
-	top: 60px;
-	left: 520px;
-	border-radius 4px;
-	padding: 8px;
-	text-align: right;
-}
+      #description {
+      	position: absolute;
+      	width: 2000px;
+      	border-bottom: 2px solid white;
+      	border-radius: 4px;
+      	padding: 8px;
+      	font-size: 100px;
+        color: white;
+        text-decoration: none;
+      }
 
-.ro8 { position: absolute; left: 10; height:  80px;  }
-.ro4 { position: absolute; left: 210; height: 160px; }
-.ro2 { position: absolute; left: 410; height: 320px; }
+      #head-contact {
+      	position: absolute;
+      	top: 60px;
+      	left: 520px;
+        border: 4px solid white;
+      	padding: 8px;
+      	text-align: right;
+        color: white;
+      }
 
-.ro8 .red, .ro8 .blue { height: 40px; }
-.ro4 .red, .ro4 .blue { height: 80px; }
-.ro2 .red, .ro2 .blue { height: 160px; }
+      .ro8 { position: absolute; left: 60; height:  80px;  color: white;}
+      .ro4 { position: absolute; left: 260; height: 160px; color: white;}
+      .ro2 { position: absolute; left: 460; height: 320px; color: white;}
 
-.first {
-	position: absolute;
-	left: 602;
-	top: 350px;
-	height: 20px;
-}
+      .ro8 .red, .ro8 .blue { height: 40px; color: white;}
+      .ro4 .red, .ro4 .blue { height: 80px; color: white;}
+      .ro2 .red, .ro2 .blue { height: 160px; color: white;}
 
-.blue, .red, .first {
-	display: table-cell;
-	position: relative;
-	border-bottom: 1px solid #000;
-	padding-left: 4px;
-	width: 196px;
-	vertical-align: bottom;
-}
+      .first {
+      	position: absolute;
+      	left: 652;
+      	top: 350px;
+      	height: 20px;
+        color: white;
+      }
 
-.red {
-	border-right: 1px solid #000;
-	left: -200px;
-}
+      .blue, .red, .first {
+      	display: table-cell;
+      	position: relative;
+      	border-bottom: 1px solid white;
+      	padding-left: 4px;
+      	width: 196px;
+      	vertical-align: bottom;
+        color: white;
+      }
 
-.ro8 .red { top:  40px; }
-.ro4 .red { top:  80px; }
-.ro2 .red { top: 160px; }
+      .red {
+      	border-right: 1px solid white;
+      	left: -200px;
+        color: white;
+      }
 
-.red:after, .blue:after, .first:after {
-	position: absolute;
-	top: calc( 100% + 4px );
-	left: 8px;
-	font-size: 6pt;
-}
+      .ro8 .red { top:  40px; color: white;}
+      .ro4 .red { top:  80px; color: white;}
+      .ro2 .red { top: 160px; color: white;}
 
-.red:after   { content: "Red player";  }
-.blue:after  { content: "Blue player"; }
-.first:after { content: "First place"; }
+      .red:after, .blue:after, .first:after {
+      	position: absolute;
+      	top: calc( 100% + 4px );
+      	left: 8px;
+      	font-size: 6pt;
+        color: white;
+      }
 
-#ro8a  { top: 200px; }
-#ro8b  { top: 280px; }
-#ro8c  { top: 360px; }
-#ro8d  { top: 440px; }
-#ro4a  { top: 180px; }
-#ro4b  { top: 340px; }
-#ro2   { top: 140px; }
+      .red:after   {color: white;}
+      .blue:after  {color: white;}
+      .first:after { content: "First Place"; color: white; font-size: 20px;}
 
-.bye { text-decoration: line-through; }
+      #ro8a  { top: 200px; color: white;}
+      #ro8b  { top: 280px; color: white;}
+      #ro8c  { top: 360px; color: white;}
+      #ro8d  { top: 440px; color: white;}
+      #ro4a  { top: 180px; color: white;}
+      #ro4b  { top: 340px; color: white;}
+      #ro2   { top: 140px; color: white;}
 
-#athletes {
-	position: absolute;
-	top: 640px;
-	left: 10px;
-	width: 500px;
-	text-align: left;
-}
+      .bye { text-decoration: line-through; color: white;}
 
-#athletes table     { width: 100%; }
-#athletes th        { text-align: left; }
-#athletes td.num    { width: 5%; }
-#athletes td.name   { width: 45%; }
-#athletes td.age    { width: 10%; }
-#athletes td.weight { width: 20%; }
-#athletes td.rank   { width: 20%; }
+      #athletes {
+      	position: absolute;
+      	top: 640px;
+      	left: 10px;
+      	width: 500px;
+      	text-align: left;
+        color: white;
+        margin-left: 50px;
+        display: inline-block;
+      }
 
-#placement {
-	position: absolute;
-	top: 720px;
-	left: 612px;
-	height: 163px;
-	width: 200px;
-	border: 1px solid #333;
-}
+      #athletes table     { width: 100%; color: white;}
+      #athletes th        { text-align: left; color: white;}
+      #athletes td.num    { width: 5%; color: white;}
+      #athletes td.name   { width: 45%; color: white;}
+      #athletes td.age    { width: 10%; color: white;}
+      #athletes td.weight { width: 20%; color: white;}
+      #athletes td.rank   { width: 20%; color: white;}
 
-#placement .place {
-	position: relative;
-	height: 40px;
-	width: 200px;
-	border-bottom: 1px solid #666;
-}
+      #placement {
+      	position: absolute;
+      	top: 720px;
+      	left: 612px;
+      	height: 163px;
+      	width: 200px;
+      	border: 1px solid white;
+        color: white;
+      }
 
-#placement .place:after { position: absolute; top: 0px; left: 4px; font-size: 6pt; }
+      #placement .place {
+      	position: relative;
+      	height: 40px;
+      	width: 200px;
+      	border-bottom: 1px solid white;
+        color: white;
+      }
 
-#first-place:after  { content: "First Place"; }
-#second-place:after { content: "Second Place"; }
-#third-place:after  { content: "Third Place"; }
-#fourth-place:after { content: "Third Place"; }
+      #placement .place:after { position: absolute; top: 0px; left: 4px; font-size: 6pt; color: white;}
+
+      #first-place:after  { content: "First Place"; color: white;}
+      #second-place:after { content: "Second Place"; color: white;}
+      #third-place:after  { content: "Third Place"; color: white;}
+      #fourth-place:after { content: "Third Place"; color: white;}
 
 		</style>
 	</head>
@@ -166,12 +183,14 @@ body {
 		</div>
 		<div id="athletes"><h2>Athletes in Division</h2>
         ${table}</div>
+    <!--
 		<div id="placement">
 			<div class="place" id="first-place"></div>
 			<div class="place" id="second-place"></div>
 			<div class="place" id="third-place"></div>
 			<div class="place" id="fourth-place"></div>
 		</div>
+    -->
 	</body>
 </html>
 
