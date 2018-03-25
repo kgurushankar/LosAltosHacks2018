@@ -21,6 +21,11 @@ const adminRoot = root + '/admin';
 
 app.get('/', require('./index.js'));
 
+//Broken
+app.all('/logout', function (req, res) {
+    res.clearCookie('Authorization').json("success");
+});
+
 app.post('/search', function (req, res) {
     console.log(req.body);
     var tournaments = Object.keys(require('./data.json'));

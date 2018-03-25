@@ -17,9 +17,7 @@ module.exports = function (req, res) {
     if (acc[user].pass == md5sum) {
         var jwt = require('jsonwebtoken');
         const secret = require('fs').readFileSync('./secret').toString();
-        if (t == null) {
-            t = acc[user].tournament;
-        }
+        t = acc[user].tournament;
         var tkn = jwt.sign({ username: user, tournament: t }, secret);
         console.log({ username: user, tournament: t });
         res.cookie('Authentication', tkn).json('success');

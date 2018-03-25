@@ -52,7 +52,7 @@
             }
         },
         "accounts": {
-            "root": "098f6bcd4621d373cade4e832627b4f6"
+            "mv": "098f6bcd4621d373cade4e832627b4f6"
         },
         "config": {
             "location": "rando",
@@ -69,7 +69,9 @@
                 "parentEmail": "Parent Email"
             }
         },
-        "accounts": {},
+        "accounts": {
+            "hs": "098f6bcd4621d373cade4e832627b4f6"
+        },
         "config": {}
     },
     "Santa Clara University Tournament": {
@@ -89,7 +91,9 @@
                 "parentEmail": "Parent Email"
             }
         },
-        "accounts": {},
+        "accounts": {
+            "sc": "098f6bcd4621d373cade4e832627b4f6"
+        },
         "config": {}
     }
 }
