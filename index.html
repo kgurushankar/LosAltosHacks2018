@@ -16,12 +16,12 @@
   <div class="search row">
     <input type="text" name="">
     <div class="col-md-3 col-sm-3 col-xs-6 buttons">
-      <a href="#" class="btn btn-sm animated-button thar-one">Search</a>
+      <a id="submit" href="#" class="btn btn-sm animated-button thar-one">Search</a>
     </div>
   </div>
   <script src="/jquery.js"></script>
   <script type="text/javascript">
-    var submit = document.querySelector('a');
+    var submit = document.getElementById('submit');
     var search = document.querySelector('input');
 
 
@@ -36,6 +36,7 @@
         success: function (data, textStatus, jqXHR) {
           console.log(data)
           localStorage.myArray = JSON.stringify(data);
+          window.location.replace('/tournaments.html');
           //data is what I will send you 
           //this is what you will do with the info 
         },
