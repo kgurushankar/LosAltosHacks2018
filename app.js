@@ -23,10 +23,10 @@ const adminRoot = root + '/admin';
 app.get('/', require('./index.js'));
 
 app.post('/search', function (req, res) {
-    var tournaments = Object.keys(require('./data/config'));
+    var tournaments = Object.keys(require('./data/competitors.json'));
     var out = [];
     for (var i = 0; i < tournaments.length; i++) {
-        if (tournaments[i].includes(req.body.query)) {
+        if (tournaments[i].toLowerCase().includes(req.body.query.toLowerCase())) {
             out.push(tournaments[i]);
         }
     }
