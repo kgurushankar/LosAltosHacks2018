@@ -1,0 +1,37 @@
+body {
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#header {
+  color: white;
+  font-family: 'Copperplate';
+  text-align: center;
+  margin-top: 50px;
+  font-size: 100px;
+}
+
+.bracket {
+  color: white;
+  font-family: 'Copperplate';
+  font-size: 30px;
+  text-align: center;
+}
+
+.basicInfo {
+  color: white;
+  font-family: 'Copperplate';
+  font-size: 30px;
+  text-align: center;
+}
+
+.matchups {
+  color: white;
+  font-family: 'Copperplate';
+  text-align: center;
+}
+
+.matchupHeader {
+  font-size: 30px;
+}
