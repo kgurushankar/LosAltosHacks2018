@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
 }));
 var cookieParser = require('cookie-parser');
 app.use(cookieParser());
-app.listen(8080);
+app.listen(80);
 
 // links
 const root = '';
