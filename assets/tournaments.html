@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>BrackIT</title>
+  <link rel="stylesheet" href="/tournaments.css">
+  <link rel="icon" href="/bracket.jpg">
+</head>
+
+<body>
+  <h1 id="header">Tournaments</h1>
+  <p id="array"></p>
+</body>
+
+<script type="text/javascript">
+  var array = document.getElementById('array')
+  console.log(localStorage.myArray)
+  var tourneys = JSON.parse(localStorage.myArray)
+  var text = ""
+  if (tourneys.length!=0) {
+    for (var i = 0; i < tourneys.length; i++) {
+      text += "<button onclick='go(\"" + tourneys[i] + "\")' id='tournament'>" + tourneys[i] + "</button>" + "<button onclick='go(\"" + tourneys[i] + "\")' id='select'>Register</button> <br>";
+    }
+  }
+  else {
+    text = "(No Tournaments Fit That Description)";
+  }
+  array.innerHTML = text;
+  function go(name) {
+    document.cookie = "tournament = " + name;
+    window.location.replace('/register.html')
+  }
+</script>
+
+</html>
