@@ -173,6 +173,11 @@ a.animated-button.thar-one:before {
 
 #newInputForm {
   float: right;
-  margin-top: -100px;
+  margin-top: -25px;
   margin-right: 20px;
+}
+
+#project {
+  border: 2px solid white;
+  margin-left: 15px;
 }
