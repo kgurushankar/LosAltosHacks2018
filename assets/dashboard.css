@@ -1,0 +1,66 @@
+body {
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+#header {
+  color: white;
+  font-family: 'Copperplate';
+  text-align: right;
+  margin-top: 25px;
+  margin-right: 20px;
+  font-size: 150px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding: 6px 8px 6px 16px;
+  font-size: 25px;
+  display: block;
+  font-family: 'Copperplate';
+}
+
+.sidebar {
+    height: 100%;
+    width: 350px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.2);;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+input {
+  background-color: transparent;
+  border: 2px solid white;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  color: white;
+  width: 850px;
+  height: 60px;
+  font-size: 40px;
+  font-family: 'Copperplate';
+  text-align: right;
+  padding-top: 20px;
+  float: right;
+}
+
+input:focus {
+  outline: none;
+}
+
+#newInputForm {
+  float: right;
+  margin-top: -100px;
+  margin-right: 20px;
+}
