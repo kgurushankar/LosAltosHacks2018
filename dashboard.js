@@ -63,9 +63,12 @@ module.exports = function (req, res) {
             console.log(data)
 
             var keys = Object.keys(data);
+            var o = "<table align='right'><tr><th>First Name</th><th>Last Name</th><th>Date</th><th>Email</th><th>Parent Email</th></tr>";
             for (var i = 0; i<keys.length;i++){
-              competitors.innerHTML += data[keys[i]].firstName + " " + data[keys[i]].lastName + " " + data[keys[i]].date + " " + data[keys[i]].personalEmail + " " + data[keys[i]].parentEmail + "<br>" //object
+              o += "<tr><td>"+data[keys[i]].firstName + "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" + data[keys[i]].lastName + "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" + data[keys[i]].date + "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" + data[keys[i]].personalEmail + "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" + data[keys[i]].parentEmail + "&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>"; //object
             }
+            o+="</table>";
+            competitors.innerHTML = o;
             //localStorage.myArray = JSON.stringify(data);
             //window.location.replace('/tournaments.html');
             //data is what I will send you
