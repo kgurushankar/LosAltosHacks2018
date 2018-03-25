@@ -12,7 +12,7 @@
 
   <script type="text/javascript">
     var array = document.getElementById('array')
-    var tourneys = ["Santa Clara Fencing Tournament", "Sunnyvale Tennis Competition", "Mountain View Tennis Tournament"]
+    var tourneys = localStorage.myArray
     var text = ""
     for (var i = 0; i<tourneys.length; i++) {
       text += "<button id='tournament'>" + tourneys[i] + "</button>" + "<button id='select'>Select</button> <br>";
