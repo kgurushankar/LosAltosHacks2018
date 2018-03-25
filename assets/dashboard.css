@@ -61,6 +61,7 @@ input:focus {
 
 .submit {
   float: right;
+  margin-right: 20px;
 }
 
 /* buttons */
@@ -146,7 +147,7 @@ a.animated-button.thar-one:hover:before {
 	height: 100%;
 }
 a.animated-button.thar-one:before {
-	display: inline-block;
+	display: block;
 	position: absolute;
 	left: 0px;
 	top: 0px;
