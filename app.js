@@ -21,16 +21,18 @@ const adminRoot = root + '/admin';
 
 app.get('/', require('./index.js'));
 
-// app.post('/search', function (req, res) {
-//     var tournaments = Object.keys(require('./data/competitors.json'));
-//     var out = [];
-//     for (var i = 0; i < tournaments.length; i++) {
-//         if (tournaments[i].toLowerCase().includes(req.body.query.toLowerCase())) {
-//             out.push(tournaments[i]);
-//         }
-//     }
-//     res.json(out);
-// });
+app.post('/search', function (req, res) {
+    console.log(req.body);
+    var tournaments = Object.keys(require('./data.json'));
+    var out = [];
+    for (var i = 0; i < tournaments.length; i++) {
+        if (tournaments[i].toLowerCase().includes(req.body.query.toLowerCase())) {
+            out.push(tournaments[i]);
+        }
+    }
+    console.dir(out);
+    res.json(out);
+});
 
 app.post('/register', function (req, res) {
     var data = req.body;
@@ -49,5 +51,3 @@ app.post('/register', function (req, res) {
 })
 
 app.post('/login', require('./login.js'));
-
-app.get('/tournament', require('./tournaments.js'))
