@@ -30,13 +30,10 @@ app.post('/search', function (req, res) {
             out.push(tournaments[i]);
         }
     }
-    console.log(out);
     res.json(out);
 });
 
 app.post('/register', function (req, res) {
-    console.log(req.body);
-    console.log(req.cookies);
     var data = req.body;
     var t = req.cookies.tournament;
     if (t == null) {
