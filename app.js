@@ -78,9 +78,6 @@ app.get('/info', function (req, res) {
           <p>Location: ${t2.location}</p>
           <p>Date: ${t2.date}</p>
         </div>
-        <div class="matchups">
-          <p class="matchupHeader">Matchups:</p>
-        </div>
       </body>
 
       <script type="text/javascript">

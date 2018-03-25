@@ -21,6 +21,9 @@ module.exports = function (req, res) {
 
     <body>
       <h1 id="header">Dashboard</h1>
+      <div class="col-md-3 col-sm-3 col-xs-6 buttons submit">
+        <a href="/bracket" id="bracket" class="btn btn-sm animated-button thar-one">Bracket</a>
+      </div>
       <p id="competitors"></p>
       <div style="display: none" id="hidden">
         <div id="newInputForm">
@@ -65,7 +68,7 @@ module.exports = function (req, res) {
             console.log(data)
 
             var keys = Object.keys(data);
-            var o = "<table align='right'><tr><th>Seed&nbsp&nbsp</th><th>First Name&nbsp</th><th>Last Name</th><th>Date</th><th>Player Email</th><th>Parent Email</th></tr>";
+            var o = "<table align='right'><tr><th>Seed&nbsp&nbsp&nbsp&nbsp</th><th>First Name&nbsp&nbsp&nbsp&nbsp</th><th>Last Name&nbsp&nbsp&nbsp&nbsp</th><th>Date</th><th>Player Email</th><th>Parent Email</th></tr>";
             for (var i = 0; i<keys.length;i++){
               var j = i+1;
               o += "<tr><td>" + j + "</td><td>" + data[keys[i]].firstName + "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" + data[keys[i]].lastName + "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" + data[keys[i]].date + "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" + data[keys[i]].personalEmail + "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" + data[keys[i]].parentEmail + "&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>"; //object

@@ -23,6 +23,11 @@ body {
   margin-top: -100px;
 }
 
+#bracket {
+  margin-top: -70px;
+  margin-right: 20px;
+}
+
 a {
   text-decoration: none;
   color: white;
