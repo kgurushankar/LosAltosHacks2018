@@ -18,7 +18,7 @@
   var tourneys = JSON.parse(localStorage.myArray)
   var text = ""
   for (var i = 0; i < tourneys.length; i++) {
-    text += "<button onclick='go(\"" + tourneys[i] + "\")' id='tournament'>" + tourneys[i] + "</button>" + "<button onclick='go(\"" + tourneys[i] + "\")' id='select'>Select</button> <br>";
+    text += "<button onclick='go(\"" + tourneys[i] + "\")' id='tournament'>" + tourneys[i] + "</button>" + "<button onclick='go(\"" + tourneys[i] + "\")' id='select'>Register</button> <br>";
   }
   array.innerHTML = text;
   function go(name) {
