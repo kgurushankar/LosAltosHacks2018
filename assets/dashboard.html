@@ -8,11 +8,12 @@
   </head>
   <body>
     <h1 id="header">Dashboard</h1>
-    <div style="display: none" id="newInputForm">
-      <input type="text" name="" value="" placeholder="Tournament Name">
-      <input type="text" name="" value="" placeholder="Location">
-      <input type="date" name="" value="" placeholder="Date">
-      <br>
+    <div style="display: none" id="hidden">
+      <div id="newInputForm">
+        <input type="text" name="" value="" placeholder="Tournament Name">
+        <input type="text" name="" value="" placeholder="Location">
+        <input type="date" name="" value="" placeholder="Date">
+      </div>
       <div class="col-md-3 col-sm-3 col-xs-6 buttons submit">
         <a href="#" class="btn btn-sm animated-button thar-one">BrackIT!</a>
       </div>
@@ -26,7 +27,7 @@
   <script src="/jquery.js"></script>
   <script type="text/javascript">
     var project = document.getElementById('project')
-    var newInputForm = document.getElementById('newInputForm');
+    var hidden = document.getElementById('hidden');
     var newTournament = document.getElementById('newTournament')
     var header = document.getElementById('header')
 
@@ -36,8 +37,8 @@
 
     newTournament.onclick = function() {
       header.innerHTML = "New"
-      if (newInputForm.style.display == "none") {
-        newInputForm.style.display = "block"
+      if (hidden.style.display == "none") {
+        hidden.style.display = "block"
       }
     }
   </script>
