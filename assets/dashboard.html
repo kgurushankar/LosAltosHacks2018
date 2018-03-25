@@ -32,7 +32,25 @@
     var header = document.getElementById('header')
 
     project.onclick = function() {
-      console.log("hello");
+      console.log(project.innerHTML);
+      $.ajax({
+        url: '/getCompetitors',
+        dataType: "json",
+        type: "GET",
+        cache: false,
+        data: { query: text },
+        success: function (data, textStatus, jqXHR) {
+          console.log(data)
+          //localStorage.myArray = JSON.stringify(data);
+          //window.location.replace('/tournaments.html');
+          //data is what I will send you
+          //this is what you will do with the info
+        },
+        error: function (jqXHR, textStatus, err) {
+          //Prints out the error
+          alert('text status ' + textStatus + ', err ' + err);
+        }
+      });
     }
 
     newTournament.onclick = function() {
