@@ -1,4 +1,3 @@
-var cfg = require('./data/config.json');
 
 // #Express Stuff
 var express = require('express');
@@ -22,16 +21,16 @@ const adminRoot = root + '/admin';
 
 app.get('/', require('./index.js'));
 
-app.post('/search', function (req, res) {
-    var tournaments = Object.keys(require('./data/competitors.json'));
-    var out = [];
-    for (var i = 0; i < tournaments.length; i++) {
-        if (tournaments[i].toLowerCase().includes(req.body.query.toLowerCase())) {
-            out.push(tournaments[i]);
-        }
-    }
-    res.json(out);
-});
+// app.post('/search', function (req, res) {
+//     var tournaments = Object.keys(require('./data/competitors.json'));
+//     var out = [];
+//     for (var i = 0; i < tournaments.length; i++) {
+//         if (tournaments[i].toLowerCase().includes(req.body.query.toLowerCase())) {
+//             out.push(tournaments[i]);
+//         }
+//     }
+//     res.json(out);
+// });
 
 app.post('/register', function (req, res) {
     var data = req.body;
@@ -39,10 +38,10 @@ app.post('/register', function (req, res) {
     if (t == null) {
         res.json('no tournament specified');
     }
-    var file = require('./data/competitors.json');
-    file[t][data.firstName + "_" + data.lastName] = data;
+    var file = require('./data.json');
+    file[t].competitors[data.firstName + "_" + data.lastName] = data;
 
-    require('fs').writeFile('./data/competitors.json', JSON.stringify(file), function (err) {
+    require('fs').writeFile('./data.json', JSON.stringify(file), function (err) {
         if (err) return console.log(err);
     });
     res.json({ 'message': 'success' });
@@ -50,3 +49,5 @@ app.post('/register', function (req, res) {
 })
 
 app.post('/login', require('./login.js'));
+
+app.get('/tournament', require('./tournaments.js'))
