@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BrackIT</title>
+    <style>
+      #bracket {
+    		display: table-cell;
+    		position: relative;
+    		border-bottom: 1px solid #000;
+    		padding-left: 4px;
+    		width: 196px;
+    		vertical-align: bottom;
+  	 }
+      .ro8 {
+        position: absolute;
+        left: 10;
+        height: 80px;
+      }
+      .ro4 {
+        position: absolute;
+        left: 210;
+        height: 160px;
+      }
+      .ro2 {
+        position: absolute;
+        left: 410;
+        height: 320px;
+      }
+    </style>
+  </head>
+  <body>
+  	<div id="bracket">
+  		<div class="ro8 match" id="ro8a">
+  			<div>1</div>
+  			<div>8</div>
+  		</div>
+  		<div class="ro8 match" id="ro8b">
+  			<div>2</div>
+  			<div>7</div>
+  		</div>
+  		<div class="ro8 match" id="ro8c">
+  			<div>3</div>
+  			<div>6</div>
+  		</div>
+      <div class="ro8 match" id="ro8d">
+  			<div>4</div>
+  			<div>5</div>
+  		</div>
+
+      <div class="ro4 match" id="ro4a">
+  			<div>9</div>
+  			<div>10</div>
+  		</div>
+  		<div class="ro4 match" id="ro4b">
+  			<div>11</div>
+  			<div>12</div>
+  		</div>
+
+  		<div class="ro2 match" id="ro2">
+  			<div>13</div>
+  			<div>14</div>
+  		</div>
+
+  		<div class="first"></div>
+  </body>
+</html>
