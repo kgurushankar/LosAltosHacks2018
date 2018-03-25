@@ -25,7 +25,9 @@ module.exports = function (req, res) {
       <div style="display: none" id="hidden">
         <div id="newInputForm">
           <input type="text" name="" value="" placeholder="Tournament Name">
+          <br>
           <input type="text" name="" value="" placeholder="Location">
+          <br>
           <input type="date" name="" value="" placeholder="Date">
         </div>
         <div class="col-md-3 col-sm-3 col-xs-6 buttons submit">
@@ -63,9 +65,10 @@ module.exports = function (req, res) {
             console.log(data)
 
             var keys = Object.keys(data);
-            var o = "<table align='right'><tr><th>First Name</th><th>Last Name</th><th>Date</th><th>Email</th><th>Parent Email</th></tr>";
+            var o = "<table align='right'><tr><th>Seed&nbsp&nbsp</th><th>First Name&nbsp</th><th>Last Name</th><th>Date</th><th>Player Email</th><th>Parent Email</th></tr>";
             for (var i = 0; i<keys.length;i++){
-              o += "<tr><td>"+data[keys[i]].firstName + "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" + data[keys[i]].lastName + "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" + data[keys[i]].date + "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" + data[keys[i]].personalEmail + "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" + data[keys[i]].parentEmail + "&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>"; //object
+              var j = i+1;
+              o += "<tr><td>" + j + "</td><td>" + data[keys[i]].firstName + "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" + data[keys[i]].lastName + "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" + data[keys[i]].date + "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" + data[keys[i]].personalEmail + "&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" + data[keys[i]].parentEmail + "&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>"; //object
             }
             o+="</table>";
             competitors.innerHTML = o;
@@ -82,7 +85,7 @@ module.exports = function (req, res) {
       }
 
       newTournament.onclick = function () {
-        header.innerHTML = "New"
+        header.innerHTML = "New Tournament"
         if (hidden.style.display == "none") {
           hidden.style.display = "block"
         }
