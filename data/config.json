@@ -1,5 +1,21 @@
 {
-    "tournament_name": {
+    "Mountain View High School Tournament": {
+        "name": "",
+        "form": {
+            "field": true
+        },
+        "add info as needed": null
+    },
+
+    "Homestead High School Tournament": {
+        "name": "",
+        "form": {
+            "field": true
+        },
+        "add info as needed": null
+    },
+
+    "Santa Clara University Tournament": {
         "name": "",
         "form": {
             "field": true

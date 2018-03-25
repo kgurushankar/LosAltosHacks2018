@@ -31,15 +31,16 @@
         cache: false,
         data: { query: text },
         success: function (data, textStatus, jqXHR) {
+          console.log(data)
           //data is what I will send you 
-          //this is what you will do with the info 
+          //this is what you will do with the info
         },
         error: function (jqXHR, textStatus, err) {
           //Prints out the error
           alert('text status ' + textStatus + ', err ' + err);
         }
       });
-      console.log(search.innerText)
+      //console.log(search.innerText)
     }
   </script>
 </body>
