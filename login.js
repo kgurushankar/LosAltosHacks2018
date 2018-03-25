@@ -11,16 +11,20 @@ module.exports = function (req, res) {
             var dat = db[keys[i]].accounts;
             for (var j = 0; j < Object.keys(dat).length; j++) {
                 var key = Object.keys(dat)[j];
-                acc[key] = dat[key];
+                acc[key] = { pass: dat[key], tournament: keys[i] };
             }
         }
     } else {
         acc = db[t].accounts;
     }
-    if (acc[user] == md5sum) {
+    if (acc[user].pass == md5sum) {
         var jwt = require('jsonwebtoken');
-        const secret = require('fs').readFileSync('./index.html').toString();
+        const secret = require('fs').readFileSync('./secret').toString();
+        if (t == null) {
+            t = acc[user].tournament;
+        }
         var tkn = jwt.sign({ username: user, tournament: t }, secret);
+        console.log({ username: user, tournament: t });
         res.cookie('Authentication', tkn).json('success');
     } else {
         res.json("Invalid Credentials");

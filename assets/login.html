@@ -32,14 +32,13 @@
           cache: false,
           data: { username: u.value, password: p.value },
           success: function (data, textStatus, jqXHR) {
-            console.log(data)
-            window.location.replace('/dashboard.html');
+            //console.log(data)
             //data is what I will send you 
             //this is what you will do with the info 
           },
           error: function (jqXHR, textStatus, err) {
             //Prints out the error 
-            alert('text status ' + textStatus + ', err ' + err);
+            //alert('text status ' + textStatus + ', err ' + err);
           }
         });
       } 

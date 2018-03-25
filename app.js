@@ -90,7 +90,7 @@ app.get('/info', function (req, res) {
 app.use('/', function (req, res, next) {
     var data = req.cookies.Authentication;
     var jwt = require('jsonwebtoken');
-    const secret = require('fs').readFileSync('./index.html').toString();
+    const secret = require('fs').readFileSync('secret').toString();
     jwt.verify(data, secret, function (err, token) {
         if (err) {
             res.redirect('/login.html');
@@ -132,3 +132,5 @@ app.post('/newTournament', function (req, res) {
 app.get('/protect', function (req, res) {
     res.send('hello');
 })
+
+app.get('/dashboard', require('./dashboard.js'))
