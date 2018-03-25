@@ -60,20 +60,20 @@ app.post('/login', require('./login.js'));
 
 app.get('/info', function (req, res) {
     var t = req.cookies.tournament;
-    var t2 = require('./data.json')[t].config;
+    var d = require('./data.json')[t];
+    var t2 = d.config;
     var out = `<!DOCTYPE html>
     <html>
       <head>
         <meta charset="utf-8">
         <title>BrackIT</title>
+        <link rel="stylesheet" href="master.css">
         <link rel="stylesheet" href="info.css">
         <link rel="icon" href="/bracket.jpg">
       </head>
       <body>
         <h1 id="header">${t}</h1>
-        <div class="bracket">
-          <p>[Put Bracket Here]</p>
-        </div>
+            <a id="bracket" href="/bracket" class="btn btn-sm animated-button thar-one">Bracket</a>
         <div class="basicInfo">
           <p>Location: ${t2.location}</p>
           <p>Date: ${t2.date}</p>
@@ -139,20 +139,36 @@ app.get('/protect', function (req, res) {
 })
 
 app.get('/getCompetitors', function (req, res) {
-  var jwt = require('jsonwebtoken');
-  const secret = require('fs').readFileSync('./secret').toString();
-  var data = req.cookies.Authentication;
-  jwt.verify(data, secret, function (err, token) {
-      if (err) {
-          res.redirect('/login.html');
-      } else {
-          console.log(token);
-          var t = token.tournament;
-          var comp = require('./data.json')[t].competitors;
-          res.json(comp);
+    var jwt = require('jsonwebtoken');
+    const secret = require('fs').readFileSync('./secret').toString();
+    var data = req.cookies.Authentication;
+    jwt.verify(data, secret, function (err, token) {
+        if (err) {
+            res.redirect('/login.html');
+        } else {
+            console.log(token);
+            var t = token.tournament;
+            var comp = require('./data.json')[t].competitors;
+            res.json(comp);
         }
-      }
-  );
+    }
+    );
 })
 
 app.get('/dashboard', require('./dashboard.js'))
+
+app.get('/bracket', function (req, res) {
+    var jwt = require('jsonwebtoken');
+    const secret = require('fs').readFileSync('./secret').toString();
+    var data = req.cookies.Authentication;
+    jwt.verify(data, secret, function (err, token) {
+        if (err) {
+            res.redirect('/login.html');
+        } else {
+            var t = token.tournament;
+            var comp = require('./data.json')[t].competitors;
+            res.send(require('./renderBracket')(t, comp));
+        }
+    }
+    );
+});
