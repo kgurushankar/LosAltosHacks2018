@@ -6,7 +6,7 @@ body {
 
 #header {
   color: white;
-  font-family: fantasy;
+  font-family: 'Copperplate';
   text-align: center;
   margin-top: 50px;
   font-size: 100px;
@@ -15,10 +15,10 @@ body {
 #array {
   color: white;
   font-size: 30px;
-  font-family: monospace;
+  font-family: 'Copperplate';
   text-align: center;
   padding-left: 90px;
-  margin-top: -80px;
+  margin-top: -65px;
 }
 
 #select {
@@ -28,7 +28,7 @@ body {
   color: white;
   width: 80px;
   height: 35px;
-  font-family: monospace;
+  font-family: 'Copperplate';
   border: 2px solid white;
   font-size: 15px;
 }
@@ -47,7 +47,7 @@ button:focus {
   background: transparent;
   color: white;
   font-size: 40px;
-  font-family: monospace;
+  font-family: 'Copperplate';
 }
 
 #tournament:hover {

@@ -6,10 +6,10 @@ body {
 
 #header {
   color: white;
-  font-family: fantasy;
+  font-family: 'Copperplate';
   text-align: center;
-  margin-top: 180px;
-  font-size: 100px;
+  margin-top: 150px;
+  font-size: 150px;
 }
 
 .buttons {
@@ -87,7 +87,7 @@ a.animated-button.thar-one {
 	border: 2px solid white;
 	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
   width: 100px;
-  font-family: fantasy;
+  font-family: 'Copperplate';
 }
 a.animated-button.thar-one:hover {
 	color: #000 !important;
@@ -117,7 +117,7 @@ a.animated-button.thar-one:before {
 
 .search {
   text-align: center;
-  margin-top: -70px;
+  margin-top: -100px;
   margin-bottom: 40px;
 
 }
@@ -132,7 +132,7 @@ input {
   width: 700px;
   height: 60px;
   font-size: 40px;
-  font-family: monospace;
+  font-family: 'Copperplate';
 }
 
 input:focus {
